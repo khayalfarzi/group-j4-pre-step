@@ -7,7 +7,7 @@ public class Main {
 
         String[] habits = {"qacamq" , "uzmek " , "hurmek"};
 
-        Pet hatiko =  new Pet("it" , "hatiko" , 11 , 95 , habits );
+        Pet hatiko =  new Pet("it" , "xatiko" , 11 , 95 , habits );
 
 
         Human jane = new Human("Jane" , "Carter" , 1995 );
