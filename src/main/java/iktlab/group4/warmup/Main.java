@@ -1,4 +1,4 @@
-package iktlab.group4.warpup;
+package iktlab.group4.warmup;
 
 public class Main {
 
