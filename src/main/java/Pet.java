@@ -20,7 +20,13 @@ public class Pet {
         this.species = species;
         this.nickname = nickname;
         this.age = age;
-        this.trickLevel = trickLevel;
+        if(trickLevel>0 && trickLevel<101) {
+            this.trickLevel = trickLevel;
+        }else{
+            this.trickLevel=0;
+        }
+
+//        this.trickLevel = trickLevel;
         this.habits = habits;
     }
 

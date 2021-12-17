@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Human {
 
     private String name;
@@ -32,7 +34,12 @@ public class Human {
         this.name = name;
         this.surname = surname;
         this.year = year;
-        this.iq = iq;
+//        this.iq = iq;
+        if(iq>0 && iq<101) {
+            this.iq = iq;
+        }else{
+            this.iq=0;
+        }
         this.mother = mother;
         this.father = father;
         this.pet = pet;
@@ -122,6 +129,30 @@ public class Human {
         else{
             System.out.println("I have a " + pet.getSpecies() +", he is " + pet.getAge() + " years old, he is almost not sly");
         }
+    }
+
+
+    public void feedPet(boolean feedTime){
+
+        Random random = new Random();
+        if(!feedTime){
+
+            System.out.println("isn't it time for feeding ");
+
+        }else{
+
+            if(pet.getTrickLevel()>random.nextInt(100)){
+
+                System.out.println("Hm... I will feed Jack's " + pet.getNickname());
+            }else{
+
+                System.out.println("I think " +  pet.getSpecies()  + " is not hungry");
+            }
+
+
+        }
+
+
     }
 
     @Override

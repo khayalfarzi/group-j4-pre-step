@@ -5,9 +5,9 @@ public class Main {
       Human mother =new Human("Jane","Karleone",80);
       Human father = new Human("Vito","Karleone",81);
 
-      Pet pet = new Pet("dog","Rock",5,75, new String[]{"eat,drink,sleep"});
+      Pet pet = new Pet("dog","Rock",5,750, new String[]{"eat,drink,sleep"});
 
-      Human child = new Human("Michael","Karleone",1977,90,pet,mother,father,new int[7][]);
+      Human child = new Human("Michael","Karleone",1977,35000,pet,mother,father,new int[7][]);
 
 
         System.out.println(child);
