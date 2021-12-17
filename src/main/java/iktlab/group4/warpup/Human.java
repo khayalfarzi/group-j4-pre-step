@@ -81,6 +81,14 @@ public class Human {
 
     @Override
     public String toString() {
-        return this.name +" " + this.surname;
+        return "Human{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", dob=" + dob +
+                ", iq=" + iq +
+                ", pet=" + pet +
+                ", mother=" + mother +
+                ", father=" + father +
+                '}';
     }
 }
