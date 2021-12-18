@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ec1db81-d27f-4f21-91e4-17cf60e08f77" name="Changes" comment="feature/step-project: test commit" />
+    <list default="true" id="2ec1db81-d27f-4f21-91e4-17cf60e08f77" name="Changes" comment="fix/step-project:">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_18_12_2021_4_17_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_18_12_2021_4_17_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_18_12_2021_4_17__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StepProjectOne.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/az/iktlab/javaPro/j4Group/Projects/One/Human.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/az/iktlab/javaPro/j4Group/Projects/One/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/az/iktlab/javaPro/j4Group/Projects/One/Pet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/iktlab/javaPro/j4Group/Projects/One/Human.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/iktlab/javaPro/j4Group/Projects/One/Human.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/iktlab/javaPro/j4Group/Projects/One/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/iktlab/javaPro/j4Group/Projects/One/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/iktlab/javaPro/j4Group/Projects/One/Pet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/iktlab/javaPro/j4Group/Projects/One/Pet.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,10 +74,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="ignore.preview.features.used" value="true" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -82,21 +99,7 @@
       <option name="project" value="LOCAL" />
       <updated>1639757227482</updated>
     </task>
-    <task id="LOCAL-00002" summary="feature/step-project: first project:  not finished">
-      <created>1639759432827</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1639759432827</updated>
-    </task>
-    <task id="LOCAL-00003" summary="feature/step-project: first project:  not finished">
-      <created>1639759579035</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1639759579035</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -104,28 +107,17 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="feature/step-project" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Happy Mini Family" />
-    <MESSAGE value="feature/step-project: first project:  not finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature/step-project: first project:  not finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="Happy Mini Family" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/group_j4_pre_step$Main.ic" NAME="Main Coverage Results" MODIFIED="1639788283020" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
