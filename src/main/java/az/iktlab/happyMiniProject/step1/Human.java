@@ -1,24 +1,21 @@
 package az.iktlab.happyMiniProject.step1;
 
+import java.util.Arrays;
+import java.util.Objects;
+
 public class Human {
-    public String name;
-    public String surname;
-    public short dateOfBirth;
-    public byte iq;
-    public Pet pet;
-    public Human mother;
-    public Human father;
-    public String[][] schedule;
+    private String name;
+    private String surname;
+    private short dateOfBirth;
+    private byte iq;
+    private String[][] schedule;
+    private Family family;
+
+
+
+
 
     public Human() {
-    }
-
-    public Human(String name, String surname, short dateOfBirth, Human mother, Human father) {
-        this.name = name;
-        this.surname = surname;
-        this.dateOfBirth = dateOfBirth;
-        this.mother = mother;
-        this.father = father;
     }
 
     public Human(String name, String surname, short dateOfBirth) {
@@ -27,28 +24,63 @@ public class Human {
         this.dateOfBirth = dateOfBirth;
     }
 
-
-    public Human(String name, String surname, short dateOfBirth, byte iq, Pet pet,
-                 Human mother, Human father, String[][] schedule) {
+    public Human(String name, String surname, short dateOfBirth, byte iq, String[][] schedule, Family family) {
         this.name = name;
         this.surname = surname;
         this.dateOfBirth = dateOfBirth;
         this.iq = iq;
-        this.pet = pet;
-        this.mother = mother;
-        this.father = father;
+        this.schedule = schedule;
+        this.family = family;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public short getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(short dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public byte getIq() {
+        return iq;
+    }
+
+    public void setIq(byte iq) {
+        if (iq>=1 && iq<=100)
+        this.iq = iq;
+        else iq=0;
+    }
+
+    public String[][] getSchedule() {
+        return schedule;
+    }
+
+    public void setSchedule(String[][] schedule) {
         this.schedule = schedule;
     }
 
-
-    public void greetPed() {
-        System.out.printf("Hello, %s", pet.nickname);
+    public Family getFamily() {
+        return family;
     }
 
-    public void describePet() {
-        String slyDegree = pet.trickLevel >= 50 ? "very sly" : "almost not sly";
-        System.out.printf("I have a %s, he is %s years old, he is %s", pet.species, pet.age, slyDegree);
-
+    public void setFamily(Family family) {
+        this.family = family;
     }
 
     @Override
@@ -56,13 +88,25 @@ public class Human {
         return "Human{" +
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
-                ", DateOfBirth=" + dateOfBirth +
+                ", dateOfBirth=" + dateOfBirth +
                 ", iq=" + iq +
-                ", pet=" + pet +
-                ", mother=" + mother +
-                ", father=" + father +
+                ", schedule=" + Arrays.toString(schedule) +
+                ", family=" + family +
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Human human = (Human) o;
+        return dateOfBirth == human.dateOfBirth && iq == human.iq && Objects.equals(name, human.name) && Objects.equals(surname, human.surname) && Arrays.equals(schedule, human.schedule) && Objects.equals(family, human.family);
+    }
 
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(name, surname, dateOfBirth, iq, family);
+        result = 31 * result + Arrays.hashCode(schedule);
+        return result;
+    }
 }

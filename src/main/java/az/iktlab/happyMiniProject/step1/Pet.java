@@ -1,15 +1,60 @@
 package az.iktlab.happyMiniProject.step1;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public class Pet {
-    public String species;
-    public String nickname;
-    public byte age;
-    public byte trickLevel;
-    public String[] habits;
+    private String species;
+    private String nickname;
+    private byte age;
+    private byte trickLevel;
+    private String[] habits;
 
     public Pet() {
+    }
+
+    public String getSpecies() {
+        return species;
+    }
+
+    public void setSpecies(String species) {
+        this.species = species;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+    public byte getAge() {
+        return age;
+    }
+
+    public void setAge(byte age) {
+        if (age>=0)
+        this.age = age;
+        else System.out.println("Age can not be negative");
+    }
+
+    public byte getTrickLevel() {
+        return trickLevel;
+    }
+
+    public void setTrickLevel(byte trickLevel) {
+        if (trickLevel>=1 && trickLevel<=100)
+        this.trickLevel = trickLevel;
+        else System.out.println("Tricklevel is between 1 and 100");
+    }
+
+    public String[] getHabits() {
+        return habits;
+    }
+
+    public void setHabits(String[] habits) {
+        this.habits = habits;
     }
 
     public Pet(String species, String nickname) {
@@ -26,6 +71,7 @@ public class Pet {
     }
 
 
+
     public void eat() {
         System.out.println("I am eating");
     }
@@ -36,6 +82,21 @@ public class Pet {
 
     public void foul() {
         System.out.println("I need to cover it up");
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Pet pet = (Pet) o;
+        return age == pet.age && trickLevel == pet.trickLevel && species.equals(pet.species) && nickname.equals(pet.nickname) && Arrays.equals(habits, pet.habits);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(species, nickname, age, trickLevel);
+        result = 31 * result + Arrays.hashCode(habits);
+        return result;
     }
 
     @Override
