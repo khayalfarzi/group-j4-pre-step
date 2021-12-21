@@ -10,11 +10,16 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Pet Rock = new Pet("dog", "Rock", (byte)5, (byte)75, new String[]{"eat", "drink", "sleep"});
-        System.out.println(Rock);
-        Human Vito = new Human("Vito", "Karleone", (short)1957);
-        Human Jane = new Human("Jane", "Karleone", (short)1958);
-        Human Michael = new Human("Michael", "Karleone", (short)1977, (byte)90, Rock, Jane, Vito, (String[][])null);
-        System.out.println(Michael);
+        Human father = new Human("Taleh", "Ustayev", (short) 1970);
+        Human mother = new Human("Xeyale", "Ustayev", (short) 1975);
+
+        Family family = new Family(father, mother);
+        System.out.println(family);
+        family.addChild(new Human("Cavid", "Ustayev", (short) 1999));
+        System.out.println(family);
+        Human child = new Human("Gunay", "Ustayev", (short) 2003);
+        family.deleteChild(child);
+        // family.deleteChild(0);
+        System.out.println(family);
     }
 }

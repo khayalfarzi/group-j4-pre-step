@@ -4,22 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ec1db81-d27f-4f21-91e4-17cf60e08f77" name="Changes" comment="fix/step-project:">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_18_12_2021_4_17_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_18_12_2021_4_17_[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_18_12_2021_4_17__Changes_.xml" beforeDir="false" />
+    <list default="true" id="2ec1db81-d27f-4f21-91e4-17cf60e08f77" name="Changes" comment="fix/step-project:project finished">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/StepProjectOne.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/az/iktlab/javaPro/j4Group/Projects/One/Human.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/az/iktlab/javaPro/j4Group/Projects/One/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/az/iktlab/javaPro/j4Group/Projects/One/Pet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/iktlab/javaPro/j4Group/Projects/One/Human.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/iktlab/javaPro/j4Group/Projects/One/Human.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/iktlab/javaPro/j4Group/Projects/One/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/iktlab/javaPro/j4Group/Projects/One/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/iktlab/javaPro/j4Group/Projects/One/Pet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/iktlab/javaPro/j4Group/Projects/One/Pet.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +28,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="fix/human-constructor_" />
+        <entry key="$PROJECT_DIR$" value="fix/human-constructor" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -99,7 +85,21 @@
       <option name="project" value="LOCAL" />
       <updated>1639757227482</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fix/step-project:project finished">
+      <created>1639788644420</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1639788644420</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fix/step-project:project finished">
+      <created>1639788665561</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1639788665561</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -107,7 +107,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="fix/run-problem" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -115,7 +127,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Happy Mini Family" />
-    <option name="LAST_COMMIT_MESSAGE" value="Happy Mini Family" />
+    <MESSAGE value="fix/step-project:project finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix/step-project:project finished" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/group_j4_pre_step$Main.ic" NAME="Main Coverage Results" MODIFIED="1639788283020" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
