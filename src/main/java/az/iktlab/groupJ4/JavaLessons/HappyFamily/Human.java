@@ -1,82 +1,160 @@
 package az.iktlab.groupJ4.JavaLessons.HappyFamily;
 
-public class Human {
-    public String name;
-    public  String surname;
-    public  short year;
-    public byte IQ;
-    public Pet pet;
-    public Human mother;
-    public Human father;
-    public String[][] schedule;
+import java.util.Arrays;
+import java.util.Objects;
 
+public class Human {
+    private String name;
+    private String surname;
+    private short year;
+    private byte IQ;
+    private Family family;
+    private String[][] schedule;
 
     public Human() {
     }
 
     public Human(String name, String surname, short year) {
-        this.name = name;
-        this.surname = surname;
-        this.year = year;
+        if(year < 0){
+            System.out.println("Enter valid year");
+        }
+        else{
+            this.name = name;
+            this.surname = surname;
+            this.year = year;
+        }
     }
 
-    public Human(String name, String surname, short year, Human mother, Human father) {
-        this.name = name;
-        this.surname = surname;
-        this.year = year;
-        this.mother = mother;
-        this.father = father;
+    public Human(String name, String surname, short year, byte IQ, String[][] schedule) {
+        if(year < 0 || IQ < 0){
+            System.out.println("Enter valid year or IQ");
+        }
+        else{
+            this.name = name;
+            this.surname = surname;
+            this.year = year;
+            this.IQ = IQ;
+            this.schedule = schedule;
+        }
     }
 
-    public Human(String name, String surname, short year, byte IQ, Pet pet, Human mother, Human father, String[][] schedule) {
-        this.name = name;
-        this.surname = surname;
-        this.year = year;
-        this.IQ = IQ;
-        this.pet = pet;
-        this.mother = mother;
-        this.father = father;
-        this.schedule = schedule;
+    public Human(String name, String surname, short year, byte IQ,  Family family, String[][] schedule) {
+        if(year < 0 || IQ < 0){
+            System.out.println("Enter valid year or IQ");
+        }
+        else{
+            this.name = name;
+            this.surname = surname;
+            this.year = year;
+            this.IQ = IQ;
+            this.family = family;
+            this.schedule = schedule;
+        }
     }
 
     public void greedPet(){
-        System.out.println(String.format("Hello %s", pet.nickname));
+        System.out.println(String.format("Hello %s", family.getPet().getNickname()));
     }
 
     public void describePet(){
         String sly = "";
-        if(pet.trickLevel>50){
+        if(family.getPet().getTrickLevel()>50){
             sly = "very sly";
         }else{
             sly = "not sly";
         }
-        System.out.println(String.format("I have %s. He is %s years old, he is %s", pet.species, pet.age, sly));
+        System.out.println(String.format("I have %s. He is %s years old, he is %s",
+                family.getPet().getSpecies(), family.getPet().getAge(), sly));
 
     }
 
     public boolean feedPet(boolean isIttime){
         if(isIttime){
-            System.out.println(String.format("Hm.. I will feed %s.", pet.nickname));
+            System.out.println(String.format("Hm.. I will feed %s.", family.getPet().getNickname()));
             return true;
         }
         else{
-            if(pet.trickLevel >= Math.random()*100){
-                System.out.println(String.format("Hm.. I will feed %s.", pet.nickname));
+            if(family.getPet().getTrickLevel() >= Math.random()*100){
+                System.out.println(String.format("Hm.. I will feed %s.", family.getPet().getNickname()));
                 return true;
             }
             else {
-                System.out.println(String.format("I think %s is not hungry", pet.nickname));
+                System.out.println(String.format("I think %s is not hungry", family,family.getPet().getNickname()));
                 return false;
             }
         }
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public short getYear() {
+        return year;
+    }
+
+    public void setYear(short year) {
+        this.year = year;
+    }
+
+    public byte getIQ() {
+        return IQ;
+    }
+
+    public void setIQ(byte IQ) {
+        this.IQ = IQ;
+    }
+
+    public Family getFamily() {
+        return family;
+    }
+
+    public void setFamily(Family family) {
+        this.family = family;
+    }
+
+    public String[][] getSchedule() {
+        return schedule;
+    }
+
+    public void setSchedule(String[][] schedule) {
+        this.schedule = schedule;
+    }
     @Override
     public String toString() {
 
         return String.format("Human{name = %s, surname = %s, year = %s," +
-                " IQ = %s, mother = %s %s, father = %s %s, pet = %s", name, surname, year, IQ,
-                mother.name, mother.surname,
-                father.name, father.surname, pet);
+                        " IQ = %s, schedule = %s}", name, surname, year, IQ,
+                Arrays.deepToString(getSchedule())
+                );
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Human)) return false;
+        Human human = (Human) o;
+        return getYear() == human.getYear() && getIQ() == human.getIQ() && Objects.equals(getName(),
+                human.getName()) && Objects.equals(getSurname(), human.getSurname()) &&
+                Objects.equals(family, human.family) && Arrays.equals(getSchedule(), human.getSchedule());
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(getName(), getSurname(), getYear(), getIQ(), family);
+        result = 31 * result + Arrays.hashCode(getSchedule());
+        return result;
     }
 }
