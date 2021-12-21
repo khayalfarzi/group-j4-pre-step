@@ -3,7 +3,6 @@ package az.iktlab.group_j4.readme.homework1;
 import java.util.Random;
 
 public class Human {
-
     public String name;
     public String surname;
     public int year;

@@ -30,8 +30,8 @@ public class Pet {
     public void settrickLevel(byte trickLevel) {
        this.trickLevel = trickLevel;
     }
-    public  String gettrickLevel() {
 
+    public  String gettrickLevel() {
         if (trickLevel>50)
            return "very sly";
         else

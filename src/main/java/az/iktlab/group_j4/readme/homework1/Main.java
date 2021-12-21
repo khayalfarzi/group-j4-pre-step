@@ -49,7 +49,6 @@ public class Main {
         System.out.println(h1.toString());
         System.out.println(h2.toString());
 
-
         System.out.printf("Is it time to feed %s (Y/N):",p.nickname );
         Scanner sc = new Scanner(System.in);
         String feedTime = sc.nextLine();
