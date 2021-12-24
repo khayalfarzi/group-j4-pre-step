@@ -3,8 +3,57 @@ package az.iktlab.groupJ4.JavaLessons.HappyFamily;
 import java.util.Arrays;
 import java.util.Objects;
 
+enum Species {
+    Cat(false, (byte) 4, true),
+    Dog(false, (byte) 4, true),
+    Parrot(true, (byte) 2, false);
+
+    private boolean canFly;
+    private byte numberOfLegs;
+    private boolean hasFur;
+
+    Species(boolean canFly, byte numberOfLegs, boolean hasFur){
+        this.canFly = canFly;
+        this.numberOfLegs = numberOfLegs;
+        this.hasFur = hasFur;
+    }
+
+    public boolean isCanFly() {
+        return canFly;
+    }
+
+    public void setCanFly(boolean canFly) {
+        this.canFly = canFly;
+    }
+
+    public byte getNumberOfLegs() {
+        return numberOfLegs;
+    }
+
+    public void setNumberOfLegs(byte numberOfLegs) {
+        this.numberOfLegs = numberOfLegs;
+    }
+
+    public boolean isHasFur() {
+        return hasFur;
+    }
+
+    public void setHasFur(boolean hasFur) {
+        this.hasFur = hasFur;
+    }
+
+    @Override
+    public String toString() {
+        return "Species{" +
+                "canFly=" + canFly +
+                ", numberOfLegs=" + numberOfLegs +
+                ", hasFur=" + hasFur +
+                '}';
+    }
+}
+
 public class Pet {
-    private String species;
+    private Species species;
     private String nickname;
     private byte age;
     private byte trickLevel;
@@ -13,12 +62,12 @@ public class Pet {
     public Pet() {
     }
 
-    public Pet(String species, String nickname) {
+    public Pet(Species species, String nickname) {
         this.species = species;
         this.nickname = nickname;
     }
 
-    public Pet(String species, String nickname, byte age, byte trickLevel, String[] habits) {
+    public Pet(Species species, String nickname, byte age, byte trickLevel, String[] habits) {
         if(age < 0 || trickLevel < 0){
             System.out.println("Enter valid age or tricklevel");
         }
@@ -43,11 +92,11 @@ public class Pet {
         System.out.println("I need cover it up");
     }
 
-    public String getSpecies() {
+    public Species getSpecies() {
         return species;
     }
 
-    public void setSpecies(String species) {
+    public void setSpecies(Species species) {
         this.species = species;
     }
 
@@ -112,5 +161,11 @@ public class Pet {
         int result = Objects.hash(getSpecies(), getNickname(), getAge(), getTrickLevel());
         result = 31 * result + Arrays.hashCode(getHabits());
         return result;
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.println("Pet finalize() called");
+        super.finalize();
     }
 }

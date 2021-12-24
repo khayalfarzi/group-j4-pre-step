@@ -126,4 +126,11 @@ public class Family {
         return String.format("Mother = %s, \n Father = %s,  \n Children = %s,  \n pet = %s",
                 mother, father, Arrays.toString(children), pet);
     }
+
+    @Override
+    protected void finalize() throws Throwable {
+
+        System.out.println("Family finalize() called");
+        super.finalize();
+    }
 }

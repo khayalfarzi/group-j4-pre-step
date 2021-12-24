@@ -3,6 +3,16 @@ package az.iktlab.groupJ4.JavaLessons.HappyFamily;
 import java.util.Arrays;
 import java.util.Objects;
 
+enum DaysOfWeek{
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday,
+    Sunday
+}
+
 public class Human {
     private String name;
     private String surname;
@@ -156,5 +166,11 @@ public class Human {
         int result = Objects.hash(getName(), getSurname(), getYear(), getIQ(), family);
         result = 31 * result + Arrays.hashCode(getSchedule());
         return result;
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.println("Human finalize() called");
+        super.finalize();
     }
 }
