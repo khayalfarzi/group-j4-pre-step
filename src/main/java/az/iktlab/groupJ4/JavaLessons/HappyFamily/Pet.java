@@ -4,11 +4,11 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public class Pet {
-    public String species;
-    public String nickname;
-    public byte age;
-    public byte trickLevel; //a whole number from 1 to 100
-    public String []habits; //array of strings
+    private String species;
+    private String nickname;
+    private byte age;
+    private byte trickLevel; //a whole number from 1 to 100
+    private String []habits; //array of strings
 
     public Pet() {
     }

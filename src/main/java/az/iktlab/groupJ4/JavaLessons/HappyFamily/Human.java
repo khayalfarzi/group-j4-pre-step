@@ -3,14 +3,14 @@ package az.iktlab.groupJ4.JavaLessons.HappyFamily;
 import java.util.Arrays;
 
 public class Human {
-    public String name;
-    public String surname;
-    public short year; //date of birth (year), number
-    public byte iq; //a whole number from 1 to 100
-    public Pet pet; //object type Pet
-    public Human mother; //object type Human
-    public Human father; //object type Human
-    public String [][]schedule;
+    private String name;
+    private String surname;
+    private short year; //date of birth (year), number
+    private byte iq; //a whole number from 1 to 100
+    private Pet pet; //object type Pet
+    private Human mother; //object type Human
+    private Human father; //object type Human
+    private String [][]schedule;
 
     public Human() {
     }
