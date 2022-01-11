@@ -2,18 +2,13 @@ package az.iktlab.groupJ4.JavaLessons.HappyFamily;
 
 public class Main {
     public static void main(String[] args) {
-        Human father = new Human("Elmar", "Memmedov", (short) 1960);
-        Human mother = new Human("Gulnar", "Memmedova", (short) 1955);
-
-        Family family = new Family(father, mother);
-        System.out.println(family);
-        family.addChild(new Human("Huseyn", "Memmedov", (short) 1985));
-        System.out.println(family);
-        Human child = new Human("Huseyn", "Memmedov", (short) 1985);
-        family.deleteChild(child);
-       // family.deleteChild(0);
-        System.out.println(family);
-
+        Pet rock = new Pet("dog", "Rock", (byte)5, (byte)75, new String[]{"eat", "drink", "sleep"});
+        Human jane = new Human("Jane", "Karleone", (short)1960);
+        Human vito = new Human("Vito", "Karleone", (short)1965);
+        Human micheal = new Human("Michael", "Karleone", (short)1977, (byte)90, rock, jane, vito,
+                new String[][]{{"reading book"}, {"playing football", "watching movie"}});
+        micheal.greetPet();
+        micheal.describePet();
     }
 
 }
