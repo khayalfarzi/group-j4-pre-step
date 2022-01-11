@@ -70,6 +70,8 @@ public class Human {
         return year;
     }
     public void setYear(short year){
+        if (year<=0)
+            System.out.print("year must be greater than zero");
         this.surname= surname;
     }
 
@@ -78,6 +80,8 @@ public class Human {
     }
 
     public void setIq(byte iq) {
+        if (iq<0)
+            System.out.println("iq can not get a negative value");
         this.iq = iq;
     }
 
