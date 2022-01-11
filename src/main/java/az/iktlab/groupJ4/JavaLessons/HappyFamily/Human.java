@@ -41,16 +41,74 @@ public class Human {
     }
 
     public void greetPet(){
-        System.out.println(String.format("Hello, %s", pet.nickname));
+        System.out.println(String.format("Hello, %s", pet.getNickname()));
     }
 
     public void describePet(){
         String sly="";
-        if (pet.trickLevel>50){
+        if (pet.getTrickLevel()>50){
             sly="very sly";
         }else{sly="almost not sly";}
-        System.out.printf("I have a %s, he is %s years old, he is %s",pet.species,pet.age,sly);
+        System.out.printf("I have a %s, he is %s years old, he is %s",pet.getSpecies(),pet.getAge(),sly);
     }
+
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+    public void setSurname(String surname){
+        this.surname = surname;
+    }
+
+    public short getYear(){
+        return year;
+    }
+    public void setYear(short year){
+        this.surname= surname;
+    }
+
+    public byte getIq() {
+        return iq;
+    }
+
+    public void setIq(byte iq) {
+        this.iq = iq;
+    }
+
+    public Pet getPet(){
+        return pet;
+    }
+    public void setPet(Pet pet){
+        this.pet = pet;
+    }
+
+    public Human getMother(){
+        return mother;
+    }
+    public void setMother(Human mother){
+        this.mother = mother;
+    }
+
+    public Human getFather(){
+        return father;
+    }
+    public void setFather(Human father){
+        this.father = father;
+    }
+
+    public String[][] getSchedule() {
+        return schedule;
+    }
+    public void setSchedule(String[][] schedule) {
+        this.schedule = schedule;
+    }
+
     @Override
     public String toString() {
         return "Human{" +
